@@ -16,12 +16,49 @@ body {
 }
 
 header {
+  position: relative;
   text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
   background-color: #1a237e;
   color: white;
   border-radius: 5px;
+}
+
+.header-top {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  background-color: #ffffff;
+  color: #1a237e;
+  border: 1px solid #d7dcff;
+  border-radius: 999px;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.icon-btn:hover {
+  background-color: #edf1ff;
+}
+
+.auth-status {
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.18);
+  padding: 4px 8px;
+  border-radius: 10px;
 }
 
 header h1 {
@@ -164,6 +201,46 @@ button:hover {
   background-color: #3949ab;
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 22px;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  color: #555;
+  font-size: 24px;
+  padding: 2px 8px;
+}
+
+.modal-close:hover {
+  background-color: #f1f1f1;
+}
+
+.login-required-note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #8a6d3b;
+}
+
 .message {
   margin-top: 20px;
   padding: 10px;
@@ -190,6 +267,17 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 640px) {
+  .header-top {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .user-controls {
+    justify-content: center;
+  }
 }
 
 footer {
